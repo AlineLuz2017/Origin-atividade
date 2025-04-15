@@ -1,0 +1,47 @@
+Aline Aprigio da Luz
+Comandos Git usados na tarefa:
+mkdir tarefa-git && cd tarefa-git
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
+
+cd curso-branchs-ifrn-ead
+
+echo "A Páscoa é tempo propício para reconhecer as injustiças de todos os tipos e a impotência humana diante de situações incontroláveis e incompreensíveis para a finitude de nossa mente
+" > texto.txt
+git add texto.txt
+git commit -m "Adiciona texto.txt na main"
+3.
+git checkout -b feature-1
+echo "Linha alterada na feature-1" > texto.txt
+git add texto.txt
+git commit -m "Altera texto.txt na feature-1"
+ 
+4. 
+git checkout main
+echo "Linha alterada na main" > texto.txt
+git add texto.txt
+git commit -m "Altera texto.txt na main (gera conflito)"
+
+5. 
+git merge feature-1
+
+# Linha alterada na main
+# Linha alterada na feature-1
+
+git add texto.txt
+git commit -m "Resolve conflito entre main e feature-1"
+
+6.
+
+git checkout -b add-comandos
+echo "Seu Nome Completo" > comandos.txt
+echo "Comandos Git usados na tarefa:" >> comandos.txt
+echo "1. mkdir tarefa-git && cd tarefa-git" >> comandos.txt
+echo "2. git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead.git" >> comandos.txt
+
+git add comandos.txt
+git commit -m "Adiciona arquivo comandos.txt com histórico de comandos"
+
+# Vincular ao repositório local (substitua SUA_URL pelo link do seu repositório)
+git remote add origin-atividade SUA_URL
+git push -u origin-atividade main
+git push -u origin-atividade add-comandos
