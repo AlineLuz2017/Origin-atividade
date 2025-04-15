@@ -41,7 +41,6 @@ echo "2. git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead.git" 
 git add comandos.txt
 git commit -m "Adiciona arquivo comandos.txt com histórico de comandos"
 
-# Vincular ao repositório local (substitua SUA_URL pelo link do seu repositório)
 git remote add origin-atividade SUA_URL
 git push -u origin-atividade main
 git push -u origin-atividade add-comandos
